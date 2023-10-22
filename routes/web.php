@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/home', function () {
     return view('welcome');
-})->middleware('auth');
+})->middleware(['auth','verified']);
