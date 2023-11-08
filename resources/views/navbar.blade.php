@@ -38,31 +38,55 @@
             <div id="mobile-menu-wrap"></div>
         </div>
     </header>-->
-    <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex justify-content-between align-items-center">
 
-      <div id="logo">
-        <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
-        <!-- Uncomment below if you prefer to use a text logo -->
-        <!--<h1><a href="index.html">Regna</a></h1>-->
-      </div>
+        <div id="logo">
+            <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+            <!-- Uncomment below if you prefer to use a text logo -->
+            <!--<h1><a href="index.html">Regna</a></h1>-->
+        </div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>          
-              <li><a href="#">Discover</a></li>
-              <li><a href="#">Create</a></li>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                <li class="dropdown"><a href="#"><span>Projects</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Discover</a></li>
+                        <li><a href="#">Create</a></li>
+                    </ul>
+                </li>
+                @guest
+                <li id="login">
+                    <form id="logout-form" action="{{ route('login') }}" method="get">
+                        @csrf
+                <li id="login"> <input class="btn-get-started" type="submit" value="Log In" name="login" id="login">
+                </li>
+                </form>
+                @endguest
+                @auth()
+                <li id="login"><a class="nav-link scrollto" href="#contact">Profile</a></li>
+
+                <li>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <i class="fa fa-sign-out"></i>
+
+                        <input class="btn-get-started" type="submit" value="Log Out" name="logout" id="logout">
+
+                    </form>
+                </li>
+
+
+
+
+                @endauth
             </ul>
-          </li>
-          <li id="login"><a class="nav-link scrollto" href="#contact">Login</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
     </div>
-  </header><!-- End Header -->
+</header><!-- End Header -->

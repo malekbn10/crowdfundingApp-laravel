@@ -636,3 +636,34 @@ h2 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+.btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 1px solid #fff;
+  color: #000000;
+}
+
+
+.btn-get-started:hover {
+  background: #7e0cf5;
+  border: 1px solid #7e0cf5;
+
+}
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fbc2eb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
+  }
