@@ -23,3 +23,4 @@ Route::get('/profile', function () {
 Route::get('/home', function () {
     return view('home');
 })->middleware(['auth','verified']);
+Route::view('/profile','profile')->middleware(['auth','verified']);

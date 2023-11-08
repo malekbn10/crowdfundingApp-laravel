@@ -69,12 +69,11 @@
                 </form>
                 @endguest
                 @auth()
-                <li id="login"><a class="nav-link scrollto" href="#contact">Profile</a></li>
+                <li id="login"><a class="nav-link scrollto" href="/profile">Profile</a></li>
 
                 <li>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST">
                         @csrf
-                        <i class="fa fa-sign-out"></i>
 
                         <input class="btn-get-started" type="submit" value="Log Out" name="logout" id="logout">
 
@@ -85,6 +84,13 @@
 
 
                 @endauth
+                <section id="hero" style="background-image:url({{url('images/hero-bg.jpg')}})">
+                    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+                        <h1>Welcome to Regna</h1>
+                        <h2>We are team of talented designers making websites with Bootstrap</h2>
+                        <a href="#about" class="btn-get-started">Get Started</a>
+                    </div>
+                </section><!-- End Hero Section -->
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
