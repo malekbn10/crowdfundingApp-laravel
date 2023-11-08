@@ -14,8 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('/profile', function () {
+    return view('profile');
 });
 Route::get('/home', function () {
-    return view('welcome');
+    return view('home');
 })->middleware(['auth','verified']);
+Route::view('/profile','profile')->middleware(['auth','verified']);
